@@ -1,10 +1,9 @@
 body {
   margin: 0;
-  background-image: url('/images/bg.jpg');
+  background-image: url("/images/bg.jpg");
   background-repeat: no-repeat;
-background-size: cover;
+  background-size: cover;
   background-position: center;
-
 }
 .page-content {
   width: 100%;
@@ -23,9 +22,6 @@ background-size: cover;
   -webkit-align-items: center;
   background-image: url(https://ui-cdn.digitalocean.com/registration-next/399776b…/static/media/background.2dc399f….png);
 }
-/* .section-2 p{
-    font-size: 10px;
-} */
 
 .form-header h1 {
   text-align: center;
@@ -45,8 +41,6 @@ background-size: cover;
 }
 .form-v1-content {
   background: #fff;
-  /* 
-	width: 820px; */
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   -o-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   -ms-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
@@ -67,11 +61,9 @@ background-size: cover;
 
 .form-v1-content .wizard-form {
   width: 100%;
-  /* height: 500px; */
 }
 .form-register .vertical {
   display: block;
-  /* height: 700px; */
   width: 100%;
   overflow: hidden;
   background: #3e4061;
@@ -84,7 +76,6 @@ background-size: cover;
 .form-register .steps {
   float: left;
   width: 280px;
-  /* width: 100%; */
   background: #3e4061;
 }
 .form-register .steps ul {
@@ -311,9 +302,7 @@ background-size: cover;
   -o-border-radius: 4px;
   -ms-border-radius: 4px;
 }
-.inner .form-row .form-holder input {
-  /* color: #333; */
-}
+
 .inner .form-row .form-holder input#find_bank {
   border: 2px solid #e5e5e5;
   padding: 11px 20px;
@@ -449,196 +438,158 @@ background-size: cover;
   display: none;
 }
 
-/* Chrome, Safari, Edge, Opera */
+/* number icon remove */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-/* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
-
-/* Target the date input field */
+/* style date picker */
 #date {
-    /* Set a background color for the date input field itself */
-    background-color: #fff; /* Change this to your desired background color */
-  
-    /* Set a color for the text inside the date input field */
-    color: #999/* Change this to your desired text color */
-  }
-  
-  /* Target the calendar icon inside the date input field */
-  #date::-webkit-calendar-picker-indicator {
-    /* Set the color of the calendar icon for WebKit browsers (Chrome, Safari) */
-    filter: invert(60%); /* Change this to your desired icon color */
-  }
-  
-  #date::-moz-calendar-picker-indicator {
-    /* Set the color of the calendar icon for Firefox */
-    filter: invert(60%); /* Change this to your desired icon color */
-  }
-  
-  /* For Microsoft Edge */
-  #date::-ms-clear {
-    /* Set the color of the clear button in Microsoft Edge */
-    filter: invert(60%); /* Change this to your desired icon color */
-  }
+  background-color: #fff;
+  color: #999;
+}
 
- /* Style the radio input container */
+#date::-webkit-calendar-picker-indicator {
+  filter: invert(60%);
+}
+#date::-moz-calendar-picker-indicator {
+  filter: invert(60%);
+}
+#date::-ms-clear {
+  filter: invert(60%);
+}
+
+/* style radio button */
 .radio-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
-
-/* Style the radio input label */
 .radio-input {
-    margin-right: 10px;
+  margin-right: 10px;
 }
-
-/*  */
-
-/* Style the radio input */
 .radio-input input[type="radio"] {
-    /* Set the default border color when not checked */
-    border: 1px solid red !important;
-    outline: none; /* Remove the default focus outline */
+  border: 1px solid red !important;
+  outline: none;
 }
-
-/* Style the radio input indicator (dot or circle) when checked */
 .radio-input input[type="radio"]:checked::before {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background-color: #07064b;
-    border-radius: 50%;
-   
-    margin: 3px;
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #07064b;
+  border-radius: 50%;
+  margin: 3px;
 }
-
-/* Style the radio input label when radio is checked */
 .radio-input input[type="radio"]:checked + label {
-    /* Add additional styles for the label when the radio is checked */
-    color: #07064b; /* Change this to your desired color */
-   
+  color: #07064b;
 }
 
-
-
-/* Set default styles for the checkbox input */
-.form-check-input {
-    background-color: #fff; /* Change this to your default background color */
-}
-
-/* Set styles for the checkbox input when checked */
-.form-check-input:checked {
-    background-color:#07064b ; /* Change this to your desired color */
-}
-
-
+/* style password eye-icon */
 .form-holder {
-    position: relative;
-  }
-
-  fieldset {
-    position: relative;
-  }
-
-  legend {
-    margin-bottom: 10px;
-  }
-
-  .toggle-password {
-    position: absolute;
-    right: 6px;
-    top: 40%;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-
-  .toggle-password1 {
-    position: absolute;
-    right: 6px;
-    top: 40%;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-
-  
-
-  
-
-  
-  
-
-/* .actions {
-	float: right;
-    width: 540px;
-    background: #fff;
+  position: relative;
 }
-.actions ul {
-    list-style: none;
-    padding: 0 50px;
-    margin: 13px 0 35px;
-    display: flex;
-    display: -webkit-flex;
-    justify-content: space-between;
-    -o-justify-content: space-between;
-    -ms-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -webkit-justify-content: space-between;
+
+fieldset {
+  position: relative;
 }
-.actions ul li.disabled,
-.actions ul li:first-child {
-	opacity: 0;
+
+legend {
+  margin-bottom: 10px;
 }
-.actions ul li {
-	padding: 0;
-    border: none;
-    border-radius: 50%;
-    -o-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    display: inline-flex;
-    height: 50px;
-    width: 50px;
-    justify-content: center;
-    -o-justify-content: center;
-    -ms-justify-content: center;
-    -moz-justify-content: center;
-    -webkit-justify-content: center;
-    align-items: center;
-    -o-align-items: center;
-    -ms-align-items: center;
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    background: #07064B;
-    cursor: pointer;
-    font-size: 18px;
-} 
-.actions ul li:hover {
-	background: #07064B;
+.toggle-password {
+  position: absolute;
+  right: 6px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
-.actions ul li a {
-	color: #fff;
-	text-decoration: none;
-    padding: 13px 19px;
-} */
+
+.toggle-password1 {
+  position: absolute;
+  right: 6px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Toast */
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+#snackbar.show {
+  visibility: visible;
+
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
 
 /* Captcha */
 .form-captcha {
   width: 40px;
 }
-
 .captcha {
   background-color: white;
-  /* border:1px solid #07064B; */
-
   border-radius: 5px;
   color: #07064b;
   font-size: 13px;
@@ -646,28 +597,9 @@ input[type=number] {
   justify-content: center;
   align-items: center;
 }
-
 .logo-p {
   color: gray;
 }
-
-/* @media screen and (max-width: 500px) {
-    .captcha {
-        flex-direction:column;
-    }
-    .text {
-        margin:.5em!important;
-        text-align:center;
-        
-    }
-    .logo {
-        align-self: center!important;
-    }
-    .spinner {
-        margin:2em .5em .5em .5em!important;
-    }
-} */
-
 .text {
   font-size: 15px;
   font-weight: 500;
@@ -700,11 +632,8 @@ input[class="checkbox-captcha"] + .checkmark {
 }
 input[class="checkbox-captcha"] + .checkmark span {
   content: "";
-  position: relative; /*
-    position:absolute;
-    border-bottom:3px solid;
-    border-right:3px solid;
-    border-color:#029f56;*/
+  position: relative;
+
   margin-top: -3px;
   transform: rotate(45deg);
   width: 0.75em;
@@ -794,13 +723,11 @@ input[class="checkbox-captcha"]:checked + .checkmark > span:before {
 
   font-size: 11px;
   font-weight: 700;
-  /* padding-top: 20px; */
 }
 .lists a {
   text-decoration: none;
   color: #999;
   font-size: 12px;
-  /* padding-top: 20px; */
 }
 .radio-main {
   padding-top: 3px;
@@ -892,11 +819,7 @@ input[class="checkbox-captcha"]:checked + .checkmark > span:before {
 }
 
 /* Responsive */
-@media screen and (max-width: 1199px) {
-  /* .form-v1-content {
-		margin: 180px 20px;
-	} */
-}
+
 @media screen and (max-width: 991px) {
   .form-register .content .inner {
     width: 500px;
@@ -936,44 +859,18 @@ input[class="checkbox-captcha"]:checked + .checkmark > span:before {
     border: 1px solid #e5e5e5;
   }
 }
-/* @media screen and (max-width: 767px) and (min-width: 576px) {
-	.inner .form-row-total label {
-		width: 120px;
-	}
-    
-} */
+
 @media screen and (max-width: 767px) {
-  /* .page-content{
-       /* margin-left: -179px; */
-  /* padding-right: 90px;
-        width: 100%; */
-
-  /* .main-content{
-        width: 50%;
-        /* margin-left: -600px; */
-
-  /* .form-register .vertical {
-		background: red;
-        width: 90%;
-        margin: 0;
-       
-	} */
   .inner .form-row.form-row-date .form-holder select {
     width: 17.5%;
-    /* margin-right: 20px; */
   }
 }
 @media screen and (max-width: 575px) {
-  /* .page-content{
-        margin-left: -179px;
-     } */
   .form-register .content .inner {
     width: 300px;
     height: 847px;
   }
-  /* .form-register .content .inner {
-	    padding: 0 30px;
-	} */
+
   .form-register .content .wizard-header,
   .form-register .content #form-total-p-2 .wizard-header {
     padding: 37px 0px 13px;

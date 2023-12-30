@@ -175,12 +175,12 @@
     }
     function startTransitionEffect(wizard, options, state, index, oldIndex, doneCallback) {
         var stepContents = wizard.find(".content > .body"), effect = getValidEnumValue(transitionEffect, options.transitionEffect), effectSpeed = options.transitionEffectSpeed, newStep = stepContents.eq(index), currentStep = stepContents.eq(oldIndex); switch (effect) {
-                case transitionEffect.fade: case transitionEffect.slide: var hide = (effect === transitionEffect.fade) ? "fadeOut" : "slideUp", show = (effect === transitionEffect.fade) ? "fadeIn" : "slideDown"; state.transitionElement = newStep; currentStep[hide](effectSpeed, function () {
-                    var wizard = $(this)._showAria(false).parent().parent(), state = getState(wizard); if (state.transitionElement) {
-                        state.transitionElement[show](effectSpeed, function () { $(this)._showAria(); }).promise().done(doneCallback); state.transitionElement = null;
-                    }
-                }); break; case transitionEffect.slideLeft: var outerWidth = currentStep.outerWidth(true), posFadeOut = (index > oldIndex) ? -(outerWidth) : outerWidth, posFadeIn = (index > oldIndex) ? outerWidth : -(outerWidth); $.when(currentStep.animate({ left: posFadeOut }, effectSpeed, function () { $(this)._showAria(false); }), newStep.css("left", posFadeIn + "px")._showAria().animate({ left: 0 }, effectSpeed)).done(doneCallback); break; default: $.when(currentStep._showAria(false), newStep._showAria()).done(doneCallback); break;
-            }
+            case transitionEffect.fade: case transitionEffect.slide: var hide = (effect === transitionEffect.fade) ? "fadeOut" : "slideUp", show = (effect === transitionEffect.fade) ? "fadeIn" : "slideDown"; state.transitionElement = newStep; currentStep[hide](effectSpeed, function () {
+                var wizard = $(this)._showAria(false).parent().parent(), state = getState(wizard); if (state.transitionElement) {
+                    state.transitionElement[show](effectSpeed, function () { $(this)._showAria(); }).promise().done(doneCallback); state.transitionElement = null;
+                }
+            }); break; case transitionEffect.slideLeft: var outerWidth = currentStep.outerWidth(true), posFadeOut = (index > oldIndex) ? -(outerWidth) : outerWidth, posFadeIn = (index > oldIndex) ? outerWidth : -(outerWidth); $.when(currentStep.animate({ left: posFadeOut }, effectSpeed, function () { $(this)._showAria(false); }), newStep.css("left", posFadeIn + "px")._showAria().animate({ left: 0 }, effectSpeed)).done(doneCallback); break; default: $.when(currentStep._showAria(false), newStep._showAria()).done(doneCallback); break;
+        }
     }
     function stepClickHandler(event) {
         event.preventDefault(); var anchor = $(this), wizard = anchor.parent().parent().parent().parent(), options = getOptions(wizard), state = getState(wizard), oldIndex = state.currentIndex; if (anchor.parent().is(":not(.disabled):not(.current)")) { var href = anchor.attr("href"), position = parseInt(href.substring(href.lastIndexOf("-") + 1), 0); goToStep(wizard, options, state, position); }
