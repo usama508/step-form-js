@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+  <!-- Mirrored from colorlib.com/etc/regform/colorlib-regform-27/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Sep 2023 10:18:17 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign up</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/opensans-font.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.html"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.7/imask.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/signup.css" />
+    <meta name="robots" content="noindex, follow" />
+    <script nonce="8a5b96f6-d363-475f-8738-a05e95afaae8">
+      (function (w, d) {
+        !(function (bg, bh, bi, bj) {
+          bg[bi] = bg[bi] || {};
+          bg[bi].executed = [];
+          bg.zaraz = { deferred: [], listeners: [] };
+          bg.zaraz.q = [];
+          bg.zaraz._f = function (bk) {
+            return async function () {
+              var bl = Array.prototype.slice.call(arguments);
+              bg.zaraz.q.push({ m: bk, a: bl });
+            };
+          };
+          for (const bm of ["track", "set", "debug"])
+            bg.zaraz[bm] = bg.zaraz._f(bm);
+          bg.zaraz.init = () => {
+            var bn = bh.getElementsByTagName(bj)[0],
+              bo = bh.createElement(bj),
+              bp = bh.getElementsByTagName("title")[0];
+            bp && (bg[bi].t = bh.getElementsByTagName("title")[0].text);
+            bg[bi].x = Math.random();
+            bg[bi].w = bg.screen.width;
+            bg[bi].h = bg.screen.height;
+            bg[bi].j = bg.innerHeight;
+            bg[bi].e = bg.innerWidth;
+            bg[bi].l = bg.location.href;
+            bg[bi].r = bh.referrer;
+            bg[bi].k = bg.screen.colorDepth;
+            bg[bi].n = bh.characterSet;
+            bg[bi].o = new Date().getTimezoneOffset();
+            if (bg.dataLayer)
+              for (const bt of Object.entries(
+                Object.entries(dataLayer).reduce(
+                  (bu, bv) => ({ ...bu[1], ...bv[1] }),
+                  {}
+                )
+              ))
+                zaraz.set(bt[0], bt[1], { scope: "page" });
+            bg[bi].q = [];
+            for (; bg.zaraz.q.length; ) {
+              const bw = bg.zaraz.q.shift();
+              bg[bi].q.push(bw);
+            }
+            bo.defer = !0;
+            for (const bx of [localStorage, sessionStorage])
+              Object.keys(bx || {})
+                .filter((bz) => bz.startsWith("_zaraz_"))
+                .forEach((by) => {
+                  try {
+                    bg[bi]["z_" + by.slice(7)] = JSON.parse(bx.getItem(by));
+                  } catch {
+                    bg[bi]["z_" + by.slice(7)] = bx.getItem(by);
+                  }
+                });
+            bo.referrerPolicy = "origin";
+            bo.src =
+              "../../../cdn-cgi/zaraz/sd0d9.js?z=" +
+              btoa(encodeURIComponent(JSON.stringify(bg[bi])));
+            bn.parentNode.insertBefore(bo, bn);
+          };
+          ["complete", "interactive"].includes(bh.readyState)
+            ? zaraz.init()
+            : bg.addEventListener("DOMContentLoaded", zaraz.init);
+        })(w, d, "zarazData", "script");
+      })(window, document);
+    </script>
+  </head>
+  <body>
+    <div class="page-content">
+      <div class="main-content">
+        <div class="form-header">
+          <h1>Welcome</h1>
+          <p>Create an Account</p>
+        </div>
+        <div class="form-v1-content">
+          <div class="wizard-form">
+            <form class="form-register" action="#" method="post">
+              <div id="form-total">
+                <h2>
+                  <p class="step-icon"><span>01</span></p>
+                  <span class="step-text">Personal Infomation</span>
+                </h2>
+                <section class="text-field">
+                  <div class="inner">
+                    <div class="wizard-header">
+                      <h3 class="heading" style="font-size: 20px">
+                        Personal Infomation
+                      </h3>
+                      <p style="font-size: 13px">
+                        Please enter your personal infomation
+                      </p>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-holder">
+                        <fieldset>
+                          <legend>Enter Firstname</legend>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="first-name"
+                            name="first-name"
+                            required
+                          />
+                        </fieldset>
+                      </div>
+                      <div class="form-holder">
+                        <fieldset>
+                          <legend>Enter Lastname</legend>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="last-name"
+                            name="last-name"
+                            required
+                          />
+                        </fieldset>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-holder form-holder-2">
+                        <fieldset>
+                          <legend>Date of birth</legend>
+                          <input
+                            type="date"
+                            class="form-control account-gender"
+                            id="date"
+                          />
+                        </fieldset>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="gender account-gender">
+                        <label class="">Gender</label>
+                        <div class="radio-container radio-main">
+                          <label class="radio-input">
+                            <input type="radio" name="gender" value="male" />
+                            Male
+                          </label>
+                          <label class="radio-input">
+                            <input type="radio" name="gender" value="female" />
+                            Female
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <h2>
+                  <p class="step-icon"><span>02</span></p>
+                  <span class="step-text">Address Information</span>
+                </h2>
+                <section>
+                  <div class="inner">
+                    <div class="wizard-header section-2">
+                      <h1 class="heading" style="font-size: 20px">
+                        Address Information
+                      </h1>
+                      <p style="font-size: 13px">
+                        Please enter your address infomation
+                      </p>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-holder form-holder-2">
+                        <legend>Type Of Identification</legend>
+                        <div class="input-group mb-3">
+                          <select
+                            class="form-select"
+                            id="inputGroupSelect03"
+                            aria-label="Example select with button addon"
+                            required
+                          >
+                            <option>Select Identification</option>
+                            <option value="1">ID Card</option>
+                            <option value="2">Passport</option>
+                            <option value="3">BusinessID (RNC)</option>
+                            <option value="4">Other</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-holder form-holder-2">
+                        <legend>Select Country</legend>
+                        <div class="input-group mb-3">
+                          <select
+                            class="form-select account-select select-color account-drop"
+                            id="inputGroupSelect03"
+                            aria-label="Example select with button addon"
+                            required
+                          >
+                            <option selected>Select country</option>
+                            <option value="1">Dominican Rebublic</option>
+                            <option value="2">United States</option>
+                            <option value="3">Other</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-holder form-holder-2">
+                        <fieldset>
+                          <legend>Enter your city</legend>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="city"
+                            name="city"
+                            required
+                          />
+                        </fieldset>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-holder form-holder-2">
+                        <fieldset>
+                          <legend>Enter your Address</legend>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="city"
+                            name="city"
+                            required
+                          />
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <h2>
+                  <p class="step-icon"><span>03</span></p>
+                  <span class="step-text">Contact Information</span>
+                </h2>
+                <section>
+                  <div class="inner">
+                    <div class="wizard-header section-2">
+                      <h1 class="heading" style="font-size: 20px">
+                        Contact Information
+                      </h1>
+                      <p style="font-size: 13px">
+                        Please enter your contact infomation
+                      </p>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-holder">
+                            <fieldset>
+                                <legend>Contact Number</legend>
+                                <input
+                                    type="tel"
+                                    class="form-control"
+                                    id="contactNumberVisible"
+                                    name="contactNumberVisible"
+                                    required
+                                   
+                                    oninput="formatPhoneNumber(this)"
+                                />
+                                <input
+                                    type="hidden"
+                                    id="contactNumber"
+                                    name="contactNumber"
+                                />
+                            </fieldset>
+                        </div>
+                        <div class="form-holder">
+                            <fieldset>
+                                <legend>Identification Number</legend>
+                                <input
+                                    type="number"
+                                    class="number"
+                                    id="identificationNumber"
+                                    name="identificationNumber"
+                                    required
+                                    oninput="validateNumberLength(this)"
+                                />
+                            </fieldset>
+                        </div>
+                    </div>
+                
+                
+                    
+
+                    <div class="form-row">
+                        <div class="form-holder">
+                            <fieldset>
+                              <legend>Enter E-mail</legend>
+                              <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                required
+                              />
+                            </fieldset>
+                          </div>
+                      <div class="form-holder">
+                        <fieldset>
+                          <legend>Enter Repeat E-mail</legend>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            required
+                          />
+                        </fieldset>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-holder">
+                            <fieldset>
+                              <legend>Enter Password</legend>
+                              <input
+                                type="password"
+                                class="form-control"
+                                id="password"
+                                name="password"
+                                required
+                              />
+                              <span class="toggle-password" onclick="togglePasswordVisibility()">
+                                <img src="images/eye-off-icon.png" alt="Toggle Password" width="15px" height="15px" id="eye-icon">
+                              </span>
+                            </fieldset>
+                          </div>
+                      <div class="form-holder">
+                        <fieldset>
+                          <legend>Confirm Password</legend>
+                          <input
+                            type="password"
+                            class="password"
+                            id="password1"
+                            name="password"
+                            required
+                          />
+                          <span class="toggle-password1" onclick="togglePasswordVisibility1()">
+                            <img src="images/eye-off-icon.png" alt="Toggle Password" width="15px" height="15px" id="eye-icon1">
+                          </span>
+                        </fieldset>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-holder form-holder-2">
+                        <fieldset>
+                          <div class="captcha">
+                            <div class="spinner">
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  class="checkbox-captcha"
+                                  onclick="$(this).attr('disabled','disabled');"
+                                />
+                                <span class="checkmark"
+                                  ><span>&nbsp;</span></span
+                                >
+                              </label>
+                            </div>
+                            <div class="text">I am human</div>
+                            <div class="logo">
+                              <img
+                                src="https://forum.nox.tv/core/index.php?media/9-recaptcha-png/"
+                              />
+                              <p class="logo-p">reCAPTCHA</p>
+                              <small>Privacy - Terms</small>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+
+                   <div class="form-row">
+    <div class="form-check">
+        <input
+            type="checkbox"
+            class="form-check-input"
+            id="check2"
+            name="option2"
+            value="something"
+            style="padding-top: 15px"
+            onchange="toggleCheckboxStyles(this)"
+        />
+        <label class="form-check-label lists sign-up-link" for="check2">
+            By signing up, I agree to BOLETU's
+            <strong><a href=""> terms of service</a>, <a href="">privacy policy</a>,</strong>
+            and community guidelines.
+        </label>
+    </div>
+</div>
+
+
+                    <div class="row account-name buttons">
+                      <button type="submit" class="account-button label-head">
+                        SUBMIT
+                      </button>
+
+                      
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.steps.js"></script>
+    <script src="js/main.js"></script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-23581568-13");
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"
+      integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg=="
+      data-cf-beacon='{"rayId":"803672516896f6c1","version":"2023.8.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}'
+      crossorigin="anonymous"
+    ></script>
+
+    
+    <script>
+        function formatPhoneNumber(input) {
+            // Remove non-numeric characters
+            let numericValue = input.value.replace(/\D/g, '');
+
+            // Update the visible input with formatted value
+            let formattedValue = formatPhoneNumberString(numericValue);
+            input.value = formattedValue;
+
+            // Store the numeric value in the hidden field
+            document.getElementById('contactNumber').value = numericValue;
+        }
+
+        function formatPhoneNumberString(phoneNumber) {
+            if (phoneNumber.length >= 10) {
+                return '(' + phoneNumber.substring(0, 3) + ') ' + phoneNumber.substring(3, 6) + '-' + phoneNumber.substring(6, 10);
+            } else {
+                return phoneNumber;
+            }
+        }
+
+//Identification Number
+        function validateNumberLength(input) {
+        const maxLength = 11; // Set the maximum number of digits here
+        if (input.value.length > maxLength) {
+            input.value = input.value.slice(0, maxLength);
+        }
+    }
+    </script>
+
+<script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById('password');
+      var eyeIcon = document.getElementById('eye-icon');
+  
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        eyeIcon.src = 'images/eye-on-icon.png'; // Change to your eye icon
+      } else {
+        passwordInput.type = 'password';
+        eyeIcon.src = 'images/eye-off-icon.png'; // Change to your eye-off icon
+      }
+    }
+
+    function togglePasswordVisibility1() {
+      var passwordInput1 = document.getElementById('password1');
+      var eyeIcon1 = document.getElementById('eye-icon1');
+  
+      if (passwordInput1.type === 'password') {
+        passwordInput1.type = 'text';
+        eyeIcon1.src = 'images/eye-on-icon.png'; // Change to your eye icon
+      } else {
+        passwordInput1.type = 'password';
+        eyeIcon1.src = 'images/eye-off-icon.png'; // Change to your eye-off icon
+      }
+    }
+  </script>
+
+
+  </body>
+</html>
